@@ -228,6 +228,9 @@ public class Lexer {
                 System.err.println("Error with closebrace");
                 System.exit(-2);
             }
+            else {
+                curLexeme = getLexeme();
+            }
             return tmp;
         }
         return 0;
