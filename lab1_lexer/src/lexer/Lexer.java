@@ -3,18 +3,18 @@ package lexer;
 import java.io.IOException;
 import java.io.Reader;
 
-public class Lexer {
-    Reader reader;
-    char current;
+class Lexer {
+    private Reader reader;
+    private char current;
+    private int eof;
     Lexeme curLexeme;
-    int eof;
 
-    public Lexer(Reader reader) {
+    Lexer(Reader reader) {
         this.reader = reader;
         this.eof = -1;
     }
 
-    public Lexeme getLexeme() {
+    Lexeme getLexeme() {
         int readCharachter = 0;
 
         LexemeType type;
